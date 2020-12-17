@@ -9,7 +9,7 @@ void app_main(void)
     ESP_ERROR_CHECK(enable_bar_graph());
 
     // set bool array to 11001100, this will be shown on the bar graph
-    bool arr = {true, true, false, false, true, true, false, false};
+    bool arr[8] = {true, true, false, false, true, true, false, false};
     // this way we can set the bar graph using a boolean array, instead of 8-bit integer
     set_bar_graph(bool_to_uint8(arr));
     // wait for 3000ms
